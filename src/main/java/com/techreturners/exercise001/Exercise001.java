@@ -12,6 +12,36 @@ public class Exercise001 {
 
     public int singles(int [] arr){
         // Add your code here!
+        
+        Map occurs =new HashMap();
+
+For(int i=0;i<are.length;i++) {
+
+  Integer count=occurs.get(arr[i]);
+
+  if(count==null) 
+
+    Occurs.put(arr[i], 1);
+
+  else if(count>0) 
+
+     Occurs.put(arr[i], count+1);
+
+}
+
+Int sum=0;
+
+for(Integer key : occurs.keySet()) {
+
+  if(occurs.get(key)==1)
+
+    Sum=sum+occurs.get(key);
+
+}
+
+Return sum;
+
+
         return 0;
     }
 }
