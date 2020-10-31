@@ -26,9 +26,20 @@ public class Exercise003 {
     // Explanation:
     // The first element 80 is the total weight of team 1, and the second element 0 is the total weight of team 2.
 
-    public static int[] rowWeights(final int[] weights) {
-        // Your code here!
-        return new int[]{0, 0};
-    }
+	public static int[] rowWeights(final int[] weights) {
+		// Your code here!
+		if(weights.length==1)
+			return new int[] {weights[0], 0};
+		int[] result =new int[]{0,0};
+
+		for(int i=1; i <= weights.length ; i ++) {
+			if(i%2==0)
+				result[1]+=weights[i-1];
+			else
+				result[0]+=weights[i-1];
+		}
+		return result;
+
+	}
 
 }
